@@ -210,6 +210,8 @@ private fun PostListArticleStories(
             headline = postTop.title,
             author = postTop.metadata.author.name,
             date = postTop.metadata.date,
+            onNewsCardTapped = createOnTapped("Card Tapped", postTop.title),
+            onMenuTapped = {},
             view = View.HeroItem
         )
         Spacer(modifier = Modifier.size(12.dp))
@@ -220,6 +222,8 @@ private fun PostListArticleStories(
                 headline = post.title,
                 author = post.metadata.author.name,
                 date = post.metadata.date,
+                onNewsCardTapped = createOnTapped("Card Tapped", post.title),
+                onMenuTapped = {},
                 view = View.ArticleItem
             )
             Spacer(modifier = Modifier.size(12.dp))
@@ -288,6 +292,8 @@ private fun PostListAudioStories(
                 headline = post.title,
                 author = post.metadata.author.name,
                 date = post.metadata.date,
+                onNewsCardTapped = createOnTapped("Card Tapped", post.title),
+                onMenuTapped = createOnTapped("Menu Tapped", post.title),
                 view = View.AudioItem
             )
             Spacer(modifier = Modifier.size(12.dp))
